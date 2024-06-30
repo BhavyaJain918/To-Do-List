@@ -1,0 +1,94 @@
+.heading {
+    float: left;
+    color: black; 
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Courier New';
+    margin: 40px 0px 10px 120px; 
+}
+.navbar ul {
+    padding: 10px;
+    overflow: hidden;
+    float: inline-start;
+    align-items: center;
+    border: solid 2px black;
+    margin: 30px 20px 0px 60px;
+}
+.navbar a {
+    color: black;
+    font-size: large;
+    text-decoration: none;
+    padding: 0px 70px 0px 70px;
+    font-family: 'Gill Sans' , 'Gill Sans MT';
+}
+.navbar li {
+    display: inline;
+}
+.navbar a:hover {
+    color: gray;
+}
+.login {
+    width: 100px;
+    padding: 10px;
+    margin-top: 32px;
+    float: inline-end;
+    text-align: center;
+    border-radius: 20px;
+    align-items: center;
+    margin-inline-end: 120px;
+    border: solid 2px black;
+    background-color: white;
+}
+.login a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login:hover {
+    cursor: pointer;
+}
+.main {
+    margin-top: 150px;
+    font-weight: bold;
+    font-family: 'Courier New';
+    text-align: center;
+    font-size: xx-large;
+}
+.support {
+    color: gray;
+    margin-top: 40px;
+    text-align: center;
+    font-size: x-large;
+    margin: 0px 30px 0px 30px;
+    font-family: 'Lucida Sans Unicode';
+}
+.register {
+    top: 60%;
+    left: 38%;
+    width: 300px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    border-radius: 30px;
+    background-color: cadetblue;
+}
+.register:hover {
+    background-color: olive;
+}
+.register a {
+    color: white;
+    text-decoration: none;
+}
+.free {
+    top: 68%;
+    left: 38%;
+    display: block;
+    color: grey;
+    position: absolute;
+    text-align: center;
+    margin-left: 21px;
+}

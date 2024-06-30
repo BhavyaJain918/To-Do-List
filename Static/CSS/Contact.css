@@ -1,0 +1,51 @@
+body {
+    background-image: linear-gradient(120deg , #e0c3fc 0% , #8ec5fc 100%);
+}
+.heading {
+    margin: 120px 0px 0px 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Courier New';
+}
+.subheading {
+    color: black;
+    font-weight: 200;
+    font-size: large;
+    text-align: center;
+    margin: 60px 0px 100px 55px;
+    font-family: 'Lucida Sans Unicode';
+}
+.giticon {
+    top: 50%;
+    left: 25%;
+    position: absolute;
+}
+.instaicon {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+.tweeticon {
+    top: 50%;
+    left: 75%;
+    position: absolute;
+}
+.email {
+    top: 64%;
+    left: 40%;
+    font-size: large;
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    font-family: 'Segoe UI';
+}
+.siteadd {
+    top: 70%;
+    left: 37%;
+    font-size: large;
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    font-family: 'Segoe UI';
+}

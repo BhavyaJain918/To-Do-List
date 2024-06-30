@@ -1,0 +1,18 @@
+body {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+.heading {
+    margin-top: 120px;
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Courier New';
+}
+.desc {
+    color: gray;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    margin: 60px 30px 150px 30px;
+    font-family: 'Lucida Sans Unicode';
+}

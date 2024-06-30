@@ -1,0 +1,171 @@
+.heading {
+    float: left;
+    color: black; 
+    font-weight: bold;
+    font-size: x-large;
+    font-family: 'Courier New';
+    margin: 40px 0px 10px 120px; 
+}
+.navbar ul {
+    padding: 10px;
+    overflow: hidden;
+    float: inline-start;
+    align-items: center;
+    border: solid 2px black;
+    margin: 30px 20px 0px 60px;
+}
+.navbar a {
+    color: black;
+    font-size: large;
+    text-decoration: none;
+    padding: 0px 70px 0px 70px;
+    font-family: 'Gill Sans' , 'Gill Sans MT';
+}
+.navbar a:hover {
+    color: gray;
+}
+.navbar li {
+    display: inline;
+}
+.logout {
+    width: 100px;
+    padding: 10px;
+    margin-top: 32px;
+    float: inline-end;
+    text-align: center;
+    border-radius: 20px;
+    align-items: center;
+    margin-inline-end: 120px;
+    border: solid 2px black;
+    background-color: white;
+}
+.logout a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.welmsg {
+    top: 12%;
+    left: 36%;
+    font-weight: 100;
+    position: absolute;
+    font-size: xx-large;
+    font-family: 'Segoe UI';
+}
+.taskinput {
+    top: 28%;
+    left: 16%;
+    width: 650px;
+    resize: none;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    position: absolute;
+    margin-bottom:30px;
+    border-radius: 8px;
+    padding-right: 10px;
+    font-family: Verdana;
+    border: solid 1px black;
+}
+.subtext {
+    top: 29%;
+    left: 70%;
+    border: none;
+    height: 38px;
+    width: 140px;
+    color: white;
+    display: inline;
+    font-weight: bold;
+    position: absolute;
+    border-radius: 20px;
+    background-color: cadetblue;
+}
+.subtext:hover {
+    cursor: pointer;
+    background-color: olive;
+}
+.selcom {
+    top: 39%;
+    left: 30%;
+    padding: 4px;
+    width: 225px;
+    font-weight: 800; 
+    border-radius: 6px;
+    position: absolute;
+    background-color: white;
+}
+.selcom a {
+    color: black;
+    text-decoration: none;
+}
+.selcom:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+.selrem {
+    top: 39%;
+    left: 50%;
+    padding: 4px;
+    width: 225px;
+    font-weight: 800;
+    border-radius: 6px;
+    position: absolute;
+    background-color: white;
+}
+.selrem a {
+    color: black;
+    text-decoration: none;
+}
+.selrem:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+.tasks {
+    top: 48%;
+    left: 9%;
+    width: 80%;
+    padding: 2px 4px 10px 4px;
+    position: absolute;
+    text-align: center;
+    border-radius: 5px;
+    justify-content: center;
+    border: solid 1px black;
+}
+th {
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 2px;
+    font-family: 'Segoe UI';
+    border-bottom: solid 2px black;
+}
+.taskcol {
+    width: 50%;
+}
+.stat {
+    width: 25%;
+}
+td {
+    font-size: medium;
+    font-family: Arial;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    padding: 4px 0px 8px 0px;
+    border-bottom: dashed 1pt black;
+}
+.interact {
+    display: flexbox;
+    justify-content: center;
+}
+.checkrem {
+    cursor: pointer;
+    font-size: medium;
+    border: solid 1px black;
+    background-color: white; 
+}
+::-webkit-scrollbar {
+    width: 10px
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}

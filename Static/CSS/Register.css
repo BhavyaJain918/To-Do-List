@@ -1,0 +1,88 @@
+.regimg {
+    text-align: left;
+    height: 630px;
+    width: 600px;
+    object-fit: cover;
+}
+.content {
+    top: 10%;
+    right: 5%;
+    position: fixed;
+    text-align: center;
+    margin-right: 80px;
+}
+.welcome {
+    font-size: xx-large;
+    font-family: 'Courier New';
+}
+p {
+    color: black;
+    font-size: large;
+    margin-top: 100px;
+    font-family: 'Lucida Grande' , 'Lucida Sans Unicode';
+}
+.labuser {
+    color: black;
+    font-size: medium;
+    font-family: Verdana;
+}
+.labpass {
+    color: black;
+    font-size: medium;
+    font-family: Verdana;
+}
+.username {
+    height: 20px;
+    width: 250px;
+    margin-left: 5px;
+    border-radius: 6px;
+    margin-bottom:30px;
+    font-family: Verdana;
+}
+.password {
+    height: 20px;
+    width: 250px;
+    margin-left: 10px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    font-family: Verdana;
+}
+.submit {
+    height: 30px;
+    width: 320px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    margin-left: 15px;
+    background-color: cadetblue;
+}
+.submit:hover {
+    background-color: olive;
+}
+.error {
+    font-size: small;
+    margin-top: 20px;
+    margin-left: 35px;
+    text-align: center;
+    font-family: Verdana;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation: cssAnimation 0s ease-in 2s forwards;
+    -o-animation: cssAnimation 0s ease-in 2s forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}

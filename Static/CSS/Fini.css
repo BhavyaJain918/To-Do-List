@@ -1,0 +1,76 @@
+.welmsg {
+    top: 12%;
+    left: 38%;
+    font-weight: 100;
+    position: absolute;
+    font-size: xx-large;
+    font-family: 'Segoe UI';
+}
+.suptext {
+    top: 25%;
+    left: 37%;
+    font-size: medium;
+    position: absolute;
+    font-family: 'Segoe UI';
+}
+.recvtask {
+    top: 36%;
+    left: 42%;
+    padding: 4px;
+    width: 225px;
+    font-weight: 800; 
+    border-radius: 6px;
+    position: absolute;
+    background-color: white;
+}
+.recvtask a {
+    text-decoration: none;
+}
+.recvtask:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+.tasks {
+    top: 45%;
+    left: 9%;
+    width: 80%;
+    padding: 2px 4px 10px 4px;
+    position: absolute;
+    text-align: center;
+    border-radius: 5px;
+    justify-content: center;
+    border: solid 1px black;
+}
+th {
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 2px;
+    font-family: 'Segoe UI';
+    border-bottom: solid 2px black;
+}
+.taskcol {
+    width: 50%;
+}
+.complete {
+    width: 15%;
+}
+td {
+    font-size: medium;
+    font-family: Arial;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    padding: 4px 0px 8px 0px;
+    border-bottom: dashed 1pt black;
+}
+.interact {
+    display: flexbox;
+    justify-content: center;
+}
+.checkcom {
+    width: 25px;
+    height: 15px;
+    cursor: pointer;
+    border: solid 1px black;
+    background-color: white;
+}
