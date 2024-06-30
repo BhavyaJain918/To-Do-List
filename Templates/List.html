@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = 'expires' content = '0'>
+    <meta http-equiv = 'pragma' content = 'no-cache'>
+    <meta http-equiv = 'cache-control' content = 'no-cache'>
+    <meta name = "viewport" content = "width = device-width , initial-scale = 1.0">
+    <title> TaskTrove </title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel = "stylesheet" href = "../Static/CSS/List.css">
+</head>
+<body>
+    <b class = "heading"> TaskTrove </b>
+    <div class = "nav">
+        <nav class = "navbar">
+            <ul>
+                <li><a href = "{{ url_for('about') }}"> About </a></li>
+                <li><a href = "{{ url_for('employee') }}"> Our Team </a></li>
+                <li><a href = "{{ url_for('contactus') }}"> Contact Us </a></li>
+            </ul>
+        </nav>
+        <button class = "logout"><a href = "{{ url_for('base') }}"> LOGOUT </a></button>
+    </div>
+    <h2 class = "welmsg"> Welcome To TaskTrove </h2>
+    <div class = "task">
+        <form action = "/list" method = "post">
+            <textarea name = "task" class = "taskinput" rows = "4" placeholder = "Type Task Here (Maximum 12 Words)"></textarea>
+            <input type = "submit" value = "ADD TASK" class = "subtext" id = "addtask">
+        </form>
+        <button class = "selcom"><a href = "{{ url_for('completed') }}"> CHANGE STATUS </a></button>
+        <button class = "selrem"><a href = "{{ url_for('remove') }}"> REMOVE ITEMS </a></button>
+    </div>
+    <div class = "tasktable">
+        <table class = "tasks">
+            <thead>
+                <tr>
+                    <th class = "taskcol"> TASKS </th>
+                    <th class = "stat"> STATUS </th>
+                    <th> DATE </th>
+                </tr>
+                {% for row in data %}
+                    <tr>
+                        {% for cell in row %}
+                            <td> {{cell}} </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </thead>
+        </table>
+    </div>
+    <script>
+        window.onpageshow = function(event) {
+            if(event.persisted | performance.getEntriesByType("navigation")[0].type == "back_forward") {
+                window.location.replace("/list")
+            } 
+        };
+    </script>
+</body>
+</html>

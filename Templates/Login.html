@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width , initial-scale = 1.0">
+    <title> TaskTrove </title>
+    <link rel = "stylesheet" href = "../Static/CSS/Login.css">
+</head>
+<body>
+    <div> 
+        <img class = "loginimg" src = "../Static/CSS/List_Log.png">
+    </div>
+    <div class = "content">
+        <h2 class = "welcome"> Welcome to TaskTrove </h2>
+        <form action = "/login" method = "post">
+            <p> Please enter your details to continue : </p> <br>
+            <label for = "username" class = "labuser"> Enter Username : </label>
+            <input type = "text" name = "username" class = "username" id = "user"> <br>
+            <label for = "password" class = "labpass"> Enter Password : </label>
+            <input type = "text" name = "password" class = "password" id = "pass"> <br>
+            <input type = "submit" value = "LOGIN" class = "submit" id = "login">
+        </form>
+        {% with messages = get_flashed_messages(with_categories = true) %}
+            {% for category , message in messages %}
+                <p class = "{{ category }}"> {{ message }} </p>
+            {% endfor %}
+        {% endwith %}
+    </div>
+    <script>
+        window.onpageshow = function(event) {
+            if(event.persisted | performance.getEntriesByType("navigation")[0].type == "back_forward") {
+                document.getElementById("user").value = "";
+                document.getElementById("pass").value = "";
+            } 
+            if(event.persisted | performance.getEntriesByType("navigation")[0].type == "refresh") {
+                location.reload()
+            } 
+            function preventBack() {
+                if (window.location.href() == "/login") {
+                    window.location.replace("/list");
+                }
+            }
+            window.onpagehide = function() {
+                preventBack();
+            };
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width , initial-scale = 1.0">
+    <title> TaskTrove </title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel = "stylesheet" href = "../Static/CSS/Fini.css">
+</head>
+<body>
+    <div class = "tasktable">
+        <h2 class = "welmsg"> Welcome To TaskTrove </h2>
+        <p class = "suptext"> Select items you want to change the status of : </p>
+        <button class = "recvtask"> CHANGE SELECTED </button>
+        <table class = "tasks">
+            <thead>
+                <tr>
+                    <th class = "taskcol"> TASKS </th>
+                    <th> STATUS </th>
+                    <th> DATE </th>
+                    <th class = "complete"> COMPLETED </th>
+                </tr>
+                {% for row in data %}
+                    <tr>
+                        {% for cell in row %}
+                            <td> {{cell}} </td>
+                        {% endfor %}
+                        <td class = "interact">
+                            <input type = "checkbox" name = "complete" class = "checkcom">
+                        </td>
+                    </tr>
+                {% endfor %}
+            </thead>
+        </table>
+    </div>
+    <script>
+        $(".recvtask").on("click" , function() {
+            var tasklist = [];
+            var selector = ".tasks tr input:checked";
+            $.each($(selector) , function(idx , val) {
+                var task = $(this).parent().siblings(":first").text();
+                tasklist.push({task: task})
+            });
+            tasklist = JSON.stringify(tasklist)
+            $.ajax ({
+                url: "/completed" , 
+                type: "post" ,
+                data: tasklist ,
+                contentType: "application/json" ,
+                success: function() {
+                    alert("Operation Successful")
+                    setTimeout(() => {
+                        window.location.href = "/list"
+                    } , 200 );
+                } ,
+                error: function() {
+                    alert("Error !!")
+                }
+            });
+        });
+    </script>
+</body>
+</html>

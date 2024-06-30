@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width , initial-scale = 1.0">
+    <link rel = "stylesheet" href = "../Static/CSS/Main.css">
+    <title> TaskTrove </title>
+    <!-- <link rel = "icon" type = "image/x-icon" href = "../Static/CSS/Logo_List.ico"> -->
+</head>
+<body>
+    <b class = "heading"> TaskTrove </b>
+    <div class = "nav">
+        <nav class = "navbar">
+            <ul>
+                <li><a href = "{{ url_for('about') }}"> About </a></li>
+                <li><a href = "{{ url_for('employee') }}"> Our Team </a></li>
+                <li><a href = "{{ url_for('contactus') }}"> Contact Us </a></li>
+            </ul>
+        </nav>
+        <button class = "login"><a href = "{{ url_for('login') }}"> LOGIN </a></button>
+    </div> <br>
+    <div class = "description">
+        <p class = "main">
+            Introducing TaskTrove <br>
+            Your go-to platform for seamlessly managing it all. <br>
+        </p>
+        <p class = "support">
+            Effortlessly handle your personal tasks with the confidence of a platform trusted by over 40 million users worldwide.
+        </p>
+    </div>
+    <button class = "register"><a href = "{{ url_for('register') }}"> Get Started. It's FREE </a></button>
+    <p class = "free"> FREE FOREVER. NO CREDIT CARD. </p>
+    <script>
+        window.onpageshow = function(event) {
+            if(event.persisted | performance.getEntriesByType("navigation")[0].type == "back_forward") {
+                history.pushState(null , document.title , location.href);
+                history.back();
+                history.forward();
+                window.onpopstate = function () {
+                history.go(1);
+                };
+            } 
+        };
+    </script>
+</body> 
+</html>
